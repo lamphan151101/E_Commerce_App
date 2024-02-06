@@ -7,13 +7,15 @@ import org.springframework.cglib.core.Local;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "product_image")
+@Table(name = "product_images")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class ProductImage {
+  public static final int MAXIMUM_IMAGES_PER_PRODUCT = 5;
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
