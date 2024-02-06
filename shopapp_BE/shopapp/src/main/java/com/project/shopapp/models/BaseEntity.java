@@ -8,7 +8,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Entity
+//@Entity
 @Getter
 @Setter
 @AllArgsConstructor
@@ -27,7 +27,7 @@ public class BaseEntity {
     updatedAt = LocalDateTime.now();
   }
 
-  @PrePersist
+  @PreUpdate
   protected void onUpdate() {
     updatedAt = LocalDateTime.now();
   }
